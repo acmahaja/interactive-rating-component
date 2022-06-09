@@ -1,6 +1,259 @@
-.attribution {
-  font-size: 11px;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+  --Primary: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Black-Radient: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Very-Dark-Blue);
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: var(--White);
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--Medium-Grey);
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.content {
+  width: 327px;
+  height: 360px;
+  background: var(--Black-Radient);
+  border-radius: 30px;
+  padding: 24px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#star {
+  height: 48px;
+  width: 48px;
+  background-color: var(--Dark-Blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#star img {
+  height: 16px;
+  width: 16.75px;
+}
+
+.content h1 {
+  margin-bottom: 7px;
+}
+
+.content p {
+  margin-bottom: 24px;
+}
+
+.content .ratings {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+button.rating {
+  color: var(--Medium-Grey);
+  background-color: var(--Dark-Blue);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
   text-align: center;
+  letter-spacing: 0.175px;
+
+  border: none;
+  height: 100%;
+  width: 42px;
+  border-radius: 50%;
+}
+
+button.rating.selected {
+  background-color: var(--Medium-Grey);
+  color: white;
+}
+
+button.rating:hover {
+  background-color: var(--Primary);
+  color: var(--White);
+  cursor: pointer;
+}
+
+button#submit {
+  background: var(--Primary);
+  border: none;
+  border-radius: 22.5px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+}
+
+button#submit:hover {
+  background-color: white;
+  color: var(--Primary);
+  cursor: pointer;
+}
+
+button#submit {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+}
+
+#content_success.hide {
+  display: none;
+}
+
+#content_success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+#content_success img {
+  width: 144px;
+  height: 96px;
+  margin-bottom: 24px;
+}
+
+#content_success h1 {
+  height: 32px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+p#score {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--Dark-Blue);
+  padding: 4px 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 22.5px;
+  color: var(--Primary);
+  margin-bottom: 24px;
+}
+
+#content_success h1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 1440px) {
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .content {
+    width: 412px;
+    height: 416px;
+    padding: 32px;
+  }
+  .content .ratings {
+    height: 51px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  button.rating {
+    height: 100%;
+    width: 51px;
+    font-size: 16px;
+  }
+
+  #content_success {
+    padding: 38px !important;
+  }
+
+  #content_success img {
+    width: 162px;
+    height: 108px;
+    margin-bottom: 32px;
+  }
+
+  p#score {
+    padding: 5px 12px;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #content_success h1 {
+    margin-bottom: 15px;
+  }
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  color: var(--White);
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1em;
+  width: 100%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
